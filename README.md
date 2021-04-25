@@ -2,7 +2,7 @@
 
 Desenvolvimento do layout para um teste da #Econverse.
 
-* URL: (https://ninja-somdskt.netlify.app/)
+* URL: (https://ninjasom-teste.netlify.app/)
 
 ## Instalação e configuração.
 
