@@ -24,4 +24,5 @@ Para visitar o site:
 
 * ReactJS
 * SCSS
+* axios
 * React-Modal (https://www.npmjs.com/package/react-modal)
