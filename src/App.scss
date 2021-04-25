@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import "mixins.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+}
+
+input,
+button{
+  &:focus{
+    outline: none;
+  }
+}
+
+
+.container{
+  width: 1160px;
+  margin: 0 auto;
+  @include small-desktop {
+    width: 92%;
+  }
+}

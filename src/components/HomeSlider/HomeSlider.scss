@@ -1,0 +1,208 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.slider {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: -16px;
+  height: 537px;
+  background: url("../../images/slider.png") 100%;
+  background-size: cover;
+  background-position: center;
+  @media screen and (min-width: 1520px) {
+    background-position: top;
+  }
+
+  .swiper-img {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include xs-desktop {
+    height: 400px;
+  }
+
+  @include tablet {
+    height: 300px;
+  }
+
+  @include sm-mobile {
+    height: 250px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .left-arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: -85px;
+    @include mobile {
+      width: 15px;
+    }
+
+    @media screen and (max-width: 1385px) {
+      left: -43px;
+    }
+
+    @media screen and (max-width: 1280px) {
+      left: -30px;
+    }
+
+    @include xs-desktop {
+      left: -10px;
+    }
+  }
+
+  .right-arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: -85px;
+    @include mobile {
+      width: 15px;
+    }
+
+    @media screen and (max-width: 1385px) {
+      right: -43px;
+    }
+
+    @media screen and (max-width: 1280px) {
+      right: -30px;
+    }
+
+    @include xs-desktop {
+      right: -10px;
+    }
+  }
+
+  .controls {
+    display: flex;
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include mobile {
+      bottom: 13px;
+    }
+
+    div {
+      border: solid 1px #ffffff;
+      width: 11px;
+      border-radius: 60px;
+      height: 11px;
+      margin-right: 20px;
+
+      @include mobile {
+        width: 7px;
+        height: 7px;
+      }
+
+      &:nth-child(3) {
+        background-color: #ffffff;
+      }
+    }
+  }
+
+  .slider-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $primary-font-color;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    @include mobile {
+      margin-left: -55px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 400px;
+      margin-left: 50px;
+    }
+
+    h1 {
+      font-size: 46px;
+      letter-spacing: 2px;
+
+      @media screen and (max-width: 1150px) {
+        font-size: 40px;
+      }
+
+      @include tablet {
+        font-size: 32px;
+      }
+
+      @include mobile {
+        font-size: 27px;
+      }
+    }
+
+    p {
+      &:first-child {
+        margin-bottom: 12px;
+        letter-spacing: 8px;
+        font-size: 16px;
+        @include tablet {
+          font-size: 10px;
+        }
+
+        @include mobile {
+          font-size: 8px;
+        }
+      }
+
+      &:nth-child(3) {
+        font-size: 46px;
+        letter-spacing: 4px;
+        font-weight: 100;
+        @media screen and (max-width: 1150px) {
+          font-size: 40px;
+        }
+
+        @include tablet {
+          font-size: 30px;
+        }
+
+        @include mobile {
+          font-size: 25px;
+        }
+      }
+    }
+
+    button {
+      cursor: pointer;
+      position: relative;
+      border: none;
+      height: 45px;
+      border: solid 1px transparent;
+      border-bottom: solid 1px #ffffff;
+      background-color: transparent;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 25px;
+      padding: 12px;
+      align-self: center;
+
+      @include xs-desktop {
+        margin-top: 5px;
+      }
+
+      &:hover {
+        border: solid 1px #ffffff;
+        border-radius: 5px;
+        width: 155px;
+        height: 45px;
+      }
+    }
+  }
+}

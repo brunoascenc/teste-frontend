@@ -1,0 +1,105 @@
+@import "variables.scss";
+
+.modal {
+  width: 770px;
+  height: 353px;
+  position: absolute;
+  padding: 2rem;
+  border-radius: 6px;
+  font-family: "Fjalla One", sans-serif;
+  top: 50%;
+  outline: none;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  color: rgb(43, 41, 41);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 850px) {
+    width: 90%;
+  }
+
+  @media screen and (max-width: 687px) {
+    height: 500px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+
+  .info {
+    @media screen and (max-width: 685px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .product-name {
+      color: $blue;
+      font-size: 20;
+      letter-spacing: 2px;
+      font-weight: 500;
+    }
+
+    .product-price {
+      color: $blue;
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 20px;
+      letter-spacing: 2px;
+    }
+
+    .description {
+      font-size: 10px;
+      color: $secondary-font-color;
+      letter-spacing: 1px;
+      margin-top: 20px;
+      width: 322px;
+
+      @media screen and (max-width: 685px) {
+        text-align: center;
+      }
+    }
+
+    .more-details {
+      position: relative;
+      font-size: 12px;
+      letter-spacing: 2px;
+      padding: 0 0 2px 0;
+      margin-top: 20px;
+      width: 220px;
+      color: $blue;
+      border-bottom: solid 1px $blue;
+
+      &:after {
+        content: url("../../icons/more.png");
+        position: absolute;
+        right: -11px;
+        top: 3px;
+      }
+    }
+
+    button {
+      cursor: pointer;
+      background: $blue;
+      color: #ffffff;
+      margin-top: 20px;
+      border: none;
+      padding: 16px 24px 16px 24px;
+      border-radius: 3px;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+  }
+}

@@ -1,0 +1,143 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.about {
+  height: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      margin-bottom: 20px;
+      font-size: 26px;
+      color: $blue;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 12px;
+      text-align: center;
+      margin-top: 10px;
+      line-height: 18px;
+      color: $secondary-font-color;
+    }
+  }
+
+  .designer {
+    position: absolute;
+    bottom: -40px;
+    width: 1160px;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    justify-content: center;
+    background: #f7f7f7;
+    height: 174px;
+    border-radius: 6px;
+    z-index: 100;
+    box-shadow: 5px 5px 8px 0px rgba(2, 2, 2, 0.123);
+
+    @include small-desktop {
+      width: 92%;
+    }
+
+    @include xs-desktop {
+      height: 250px;
+    }
+
+    @include xs-tablet {
+      bottom: -100px;
+    }
+
+    .left-arrow {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      left: 35px;
+      width: 7px;
+    }
+
+    .right-arrow {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      right: 35px;
+      width: 7px;
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+
+      @include xs-desktop {
+        flex-direction: column;
+        p {
+          text-align: center;
+        }
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 13px;
+
+        @include xs-desktop {
+          margin: 0;
+          margin-bottom: 10px;
+        }
+
+        p {
+          color: $blue;
+        }
+
+        .nome {
+          font-weight: bold;
+          font-size: 12px;
+          letter-spacing: 1px;
+        }
+
+        .profissao {
+          font-size: 10px;
+          margin-top: 2px;
+        }
+      }
+
+      .description {
+        position: relative;
+        width: 500px;
+        background-color: #ffffff;
+        padding: 32px;
+        font-size: 13px;
+        margin-left: 50px;
+        border-radius: 8px;
+        color: #2f2f2f;
+        box-shadow: 0px 2px 12px 0px rgba(2, 2, 2, 0.158);
+
+        @include xs-desktop {
+          width: 80%;
+          margin-left: 0;
+          padding: 28px;
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: -5px;
+          top: 40%;
+          transform: rotate(45deg);
+          border-radius: 1px;
+          width: 15px;
+          height: 15px;
+          background: #ffffff;
+        }
+      }
+    }
+  }
+}

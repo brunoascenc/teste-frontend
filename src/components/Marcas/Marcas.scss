@@ -1,0 +1,68 @@
+@import "variables.scss";
+
+.marcas {
+  margin-top: 150px;
+  height: 350px;
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  h1 {
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: $blue;
+    letter-spacing: 2px;
+    align-self: center;
+  }
+
+  p {
+    align-self: center;
+    color: #a5a5a5;
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .swiper-wrapper {
+    position: relative;
+
+    .marcas-logo {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin: 0 auto;
+      justify-content: space-between;
+      margin-top: 90px;
+    }
+
+    .left-arrow {
+      cursor: pointer;
+      position: absolute;
+      top: 110px;
+      left: -85px;
+      @media screen and (max-width: 1350px) {
+        left: -38px;
+      }
+
+      @media screen and (max-width: 990px) {
+        left: -18px;
+      }
+    }
+
+    .right-arrow {
+      cursor: pointer;
+      position: absolute;
+      top: 110px;
+      right: -85px;
+      @media screen and (max-width: 1350px) {
+        right: -38px;
+      }
+
+      @media screen and (max-width: 990px) {
+        right: -18px;
+      }
+    }
+  }
+}

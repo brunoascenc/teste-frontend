@@ -1,0 +1,130 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.novidades {
+  display: flex;
+
+  @include xs-desktop {
+    flex-direction: column;
+  }
+
+  .audio {
+    background: linear-gradient(rgba(0, 0, 0, 0.281), rgba(0, 0, 0, 0.6)),
+      url("../../images/audio.png") 100%;
+    height: 386px;
+    width: 50vw;
+    background-position: top;
+    background-size: cover;
+    border-right: solid 1px rgb(46, 46, 48);
+    display: flex;
+    align-items: flex-end;
+
+    div {
+      @media screen and (min-width: 1520px) {
+        padding-left: 125px;
+      }
+
+      @media screen and (min-width: 1700px) {
+        padding-left: 320px;
+      }
+
+      @media screen and (min-width: 2000px) {
+        padding-left: 435px;
+      }
+    }
+  }
+
+  .instrumentos {
+    background: linear-gradient(
+        rgba(156, 151, 151, 0.158),
+        rgba(0, 0, 0, 0.719)
+      ),
+      url("../../images/instrumentos.png") 100%;
+    height: 386px;
+    width: 50vw;
+    background-position: center;
+    background-size: cover;
+
+    div {
+      @media screen and (min-width: 1520px) {
+        padding-right: 125px;
+      }
+
+      @media screen and (min-width: 1700px) {
+        padding-right: 320px;
+      }
+
+      @media screen and (min-width: 2000px) {
+        padding-right: 435px;
+      }
+    }
+  }
+
+  .audio,
+  .instrumentos {
+    @include xs-desktop {
+      width: 100vw;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      justify-content: center;
+      color: $primary-font-color;
+      width: 225px;
+      font-size: 40px;
+      margin: 0 auto;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 10px;
+      letter-spacing: 4px;
+
+      &:nth-child(1) {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:after {
+          content: "";
+          height: 2px;
+          width: 19px;
+          background: #ebe6e6;
+          margin-top: 8px;
+        }
+      }
+
+      &:nth-child(3) {
+        font-size: 40px;
+        font-weight: 100;
+      }
+    }
+
+    h1 {
+      letter-spacing: 4px;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      border: solid 1px #ffffff;
+      border-radius: 5px;
+      margin-top: 27px;
+      background: transparent;
+      color: #ffffff;
+      letter-spacing: 2px;
+      height: 50px;
+      width: 155px;
+      font-size: 13px;
+      text-transform: uppercase;
+      transition: 0.2s ease;
+
+      &:hover {
+        color: $secondary-font-color;
+        background: #ffffff;
+      }
+    }
+  }
+}
